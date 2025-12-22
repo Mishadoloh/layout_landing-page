@@ -1,36 +1,43 @@
 .nav {
   &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
   }
 
   &__link {
     position: relative;
-    text-decoration: none;
-    color: $dark-color;
+
     font-size: 22px;
     line-height: 22px;
+    color: inherit;
+    text-decoration: none;
     letter-spacing: 2px;
 
     &::after {
       content: '';
-      height: 1px;
-      width: 100%;
-      display: block;
+
       position: absolute;
       bottom: -8px;
-      background-color: $dark-color;
-
-      transition: transform $duration;
       transform: scale(0);
-      transform-origin: left;
+
+      display: block;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $aside-text-color;
+
+      transition: transform 0.3s;
     }
 
     &:hover::after {
+      transform-origin: left;
       transform: scale(1);
     }
   }

@@ -2,7 +2,6 @@
   display: block;
   width: 24px;
   height: 24px;
-  background-repeat: no-repeat;
   background-size: cover;
 
   @include hover(transform, scale(1.2));
@@ -13,41 +12,33 @@
   }
 
   &--phone {
- background-image: url(../images/icons/icon-phone.png);
-    position: relative;
+    background-image: url(../images/icons/iIcon-phone-call.svg);
+    background-size: cover;
+    transition: transform 0.3s;
 
-    @include on-desktop {
-      &::before {
-        content: '+1 234 5555-55-55';
-        width: 190px;
-        position: absolute;
-        right: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-
-        color: $light-color;
-        font-weight: 700;
-        letter-spacing: 2px;
-
-        opacity: 0;
-
-        transition: opacity $duration;
-      }
-      &:hover::before {
-        opacity: 1;
-      }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
   &--menu {
-    background-image: url(../images/icons/icon-burger-menu.png);
-
+    background-image: url(../images/icons/iIcon-burger-menu.svg);
     &:hover {
-      background-image: url(../images/icons/icon-burger-menu-hover.png);
+      background-image: url(../images/icons/iIcon-burger-menu-hover.svg);
     }
   }
 
   &--close {
-    background-image: url(../images/icons/icon-close.png);
+    background-image: url(../images/icons/Icon-Close.svg);
+  }
+}
+
+.bike__logo {
+  width: 130px;
+
+  @include hover(transform, scale(1.2));
+
+  @include on-tablet {
+    width: 187px;
   }
 }

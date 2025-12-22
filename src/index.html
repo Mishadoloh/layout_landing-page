@@ -1,21 +1,16 @@
+<!-- #region head -->
 <!doctype html>
 <html
   lang="en"
   class="page"
 >
-  <!-- #region head  -->
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page My Bike</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./images/icons/favicon.svg"
-    />
+    <title>Bike</title>
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -26,12 +21,17 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="./styles/main.css"
+      href="styles/style.scss"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/icons/favicon.ico"
     />
     <script
       src="scripts/main.js"
@@ -39,72 +39,71 @@
     ></script>
   </head>
   <!-- #endregion -->
-  <body class="page__body">
-    <header
-      class="header"
-      id="header"
-    >
-      <div class="container">
-        <div class="header__content">
-          <div class="top-bar">
+  <body
+    class="page__body"
+    id="home"
+  >
+    <header class="header">
+      <div class="top-bar menu__top">
+        <a
+          href="#"
+          class="top-bar__logo"
+        >
+          <img
+            class="bike__logo"
+            src="images/mybike_white.svg"
+            alt="Bike logo"
+          />
+        </a>
+        <div class="top-bar__icons">
+          <div class="top-bar__phone-wrapper">
             <a
-              href="#header"
-              class="top-bar__logo-link"
+              href="tel:+1 234 5555-55-55"
+              class="icon icon--phone"
+            ></a>
+            <a
+              href="tel:+1 234 5555-55-55"
+              class="top-bar__phone"
             >
-              <img
-                src="./images/logo-white.png"
-                alt="MyBike logo"
-                class="top-bar__logo"
-              />
+              +1 234 555-55-55
             </a>
-            <div class="top-bar__icons">
-              <a
-                href="tel:+1 234 5555-55-55"
-                class="icon icon--phone"
-              ></a>
-              <a
-                href="#menu"
-                class="icon icon--menu"
-              ></a>
-            </div>
           </div>
-          <div class="header__bottom">
-            <h1 class="header__title">Take the Streets</h1>
-          </div>
+          <a
+            href="#menu"
+            class="icon icon--menu"
+          ></a>
         </div>
       </div>
-    </header>
-
-    <aside
-      class="menu page__menu"
-      id="menu"
-    >
-      <div class="container">
-        <div class="menu__top top-bar">
+      <div class="header__bottom">
+        <h1 class="header__title">Take the Streets</h1>
+      </div>
+      <aside
+        class="menu page__menu"
+        id="menu"
+      >
+        <div class="top-bar">
           <a
-            href="#header"
-            class="top-bar__logo-link"
+            href="#"
+            class="top-bar__logo"
           >
             <img
-              src="./images/logo-black.png"
-              alt="MyBike logo"
-              class="top-bar__logo"
+              class="bike__logo"
+              src="images/mybike_black.svg"
+              alt="Bike logo"
             />
           </a>
-          <div class="top-bar__icons">
-            <a
-              href="#"
-              class="icon icon--close"
-            ></a>
-          </div>
+          <a
+            href="#"
+            class="icon icon--close"
+          ></a>
         </div>
-        <div class="menu__bottom">
+        <div class="menu__content">
           <nav class="nav menu__nav">
             <ul class="nav__list">
               <li class="nav__item">
                 <a
                   class="nav__link"
-                  href="#"
+                  href="#home"
                 >
                   Home
                 </a>
@@ -112,9 +111,9 @@
               <li class="nav__item">
                 <a
                   class="nav__link"
-                  href="#about-us"
+                  href="#about-as"
                 >
-                  About us
+                  About As
                 </a>
               </li>
               <li class="nav__item">
@@ -122,7 +121,7 @@
                   class="nav__link"
                   href="#compare-bikes"
                 >
-                  Compare bikes
+                  Compare Bikes
                 </a>
               </li>
               <li class="nav__item">
@@ -144,293 +143,229 @@
             </ul>
           </nav>
           <a
-            class="menu__phone-number"
             href="tel:+1 234 5555-55-55"
+            class="menu__phone-number"
           >
             +1 234 5555-55-55
           </a>
           <a
-            class="menu__book-test"
             href="#"
+            class="menu__test-ride"
           >
             Book a test ride
           </a>
         </div>
-      </div>
-    </aside>
-
+      </aside>
+    </header>
     <main class="main">
       <div class="container">
-        <div class="main__content">
-          <section
-            id="about-us"
-            class="about"
-          >
-            <h2 class="section-title section-title--align-left about__title">
-              Move Free
-            </h2>
-            <p class="about__text">
-              Shift your ride, not gears. Find the fastest way to move in the
-              city as the bike adapts intuitively to power the speed you need.
-            </p>
-          </section>
-          <section
-            id="compare-bikes"
-            class="compare"
-          >
-            <h2 class="section-title">Compare Bikes</h2>
-            <div class="compare__products">
-              <article class="product compare__product">
-                <a
-                  href="#"
-                  class="product__link"
-                >
-                  <img
-                    src="./images/sporty4.png"
-                    alt="Sporty 4"
-                    class="product__photo"
-                  />
-                </a>
-                <h3 class="product__title">Sporty 4</h3>
-                <p class="product__description">
-                  The iconic frame brought to a new performance height as a
-                  sporty, active ride.
-                </p>
-                <p class="product__price">$ 2 590</p>
-              </article>
-              <article class="product compare__product">
-                <a
-                  href="#"
-                  class="product__link"
-                >
-                  <img
-                    src="./images/ride_in_town.png"
-                    alt="Ride in town ST"
-                    class="product__photo"
-                  />
-                </a>
-                <h3 class="product__title">Ride in town ST</h3>
-                <p class="product__description">
-                  An open frame for an upright riding position as the most
-                  comfortable ride in town.
-                </p>
-                <p class="product__price">$ 2 590</p>
-              </article>
-              <article class="product compare__product">
-                <a
-                  href="#"
-                  class="product__link"
-                >
-                  <img
-                    src="./images/agile_ride_3.png"
-                    alt="Agile ride 3"
-                    class="product__photo"
-                  />
-                </a>
-                <h3 class="product__title">Agile ride 3</h3>
-                <p class="product__description">
-                  The lightweight frame that has earned its street tread as a
-                  sleek, agile ride.
-                </p>
-                <p class="product__price">$ 2 090</p>
-              </article>
-            </div>
-          </section>
-          <section
-            id="details"
-            class="details"
-          >
-            <h2 class="section-title">The Details</h2>
-
-            <div class="details__wrapper">
-              <article class="detail">
-                <div class="detail__photos">
-                  <a
-                    href="#"
-                    class="detail__link detail__link--wide"
-                  >
-                    <img
-                      src="./images/details1.png"
-                      alt="Auto Unlock Photo1"
-                      class="detail__photo"
-                    />
-                  </a>
-
-                  <a
-                    href="#"
-                    class="detail__link detail__link--square"
-                  >
-                    <img
-                      src="./images/details2.png"
-                      alt="Auto Unlock Photo2"
-                      class="detail__photo"
-                    />
-                  </a>
-                </div>
-                <div class="detail__title">Auto Unlock</div>
-                <div class="detail__text">
+        <section
+          class="about-as"
+          id="about-as"
+        >
+          <h2 class="about-as__title section-title section-title__move">
+            Move Free
+          </h2>
+          <p class="about-as__content section-title__content">
+            Shift your ride, not gears. Find the fastest way to move in the city
+            as the bike adapts intuitively to power the speed you need.
+          </p>
+        </section>
+        <section
+          class="compare-bikes"
+          id="compare-bikes"
+        >
+          <h2 class="section-title">Compare Bikes</h2>
+          <div class="compare-bikes__container">
+            <article class="product">
+              <img
+                class="product__photo"
+                src="./images/bike-sporty.png"
+                alt="Bike Sporty 4"
+              />
+              <h3 class="product__title">Sporty 4</h3>
+              <p class="product__info">
+                The iconic frame brought to a new performance height as a
+                sporty, active ride.
+              </p>
+              <p class="product__price">$ 2 590</p>
+            </article>
+            <article class="product">
+              <img
+                class="product__photo"
+                src="./images/ride-st.png"
+                alt="Ride in town ST"
+              />
+              <h3 class="product__title">Ride in town ST</h3>
+              <p class="product__info">
+                An open frame for an upright riding position as the most
+                comfortable ride in town.
+              </p>
+              <p class="product__price">$ 2 590</p>
+            </article>
+            <article class="product">
+              <img
+                class="product__photo"
+                src="./images/agile-ride.png"
+                alt="Agile ride 3"
+              />
+              <h3 class="product__title">Agile ride 3</h3>
+              <p class="product__info">
+                The lightweight frame that has
+                <br />
+                earned its street tread as a sleek, agile ride.
+              </p>
+              <p class="product__price">$ 2 090</p>
+            </article>
+          </div>
+        </section>
+        <section
+          class="details"
+          id="details"
+        >
+          <h2 class="section-title">The Details</h2>
+          <div class="details__container">
+            <section class="details__info">
+              <div class="details__photos">
+                <img
+                  class="details__photos--wide details__photo"
+                  src="./images/details/bike-speedometr.png"
+                  alt="speedometr"
+                />
+                <img
+                  class="details__photos--square details__photo"
+                  src="./images/details/bike-brake.png"
+                  alt="brake"
+                />
+              </div>
+              <div class="details__text">
+                <h3 class="details__title">Auto Unlock</h3>
+                <p class="details__content">
                   The app senses when you're nearby to unlock automatically. GPS
                   tracking so you know where your bike is and can track it
                   anytime.
-                </div>
-              </article>
-              <article class="detail">
-                <div class="detail__photos">
-                  <a
-                    href="#"
-                    class="detail__link detail__link--wide"
-                  >
-                    <img
-                      src="./images/details3.png"
-                      alt="Range & Integrated lights Photo1"
-                      class="detail__photo"
-                    />
-                  </a>
-
-                  <a
-                    href="#"
-                    class="detail__link detail__link--square"
-                  >
-                    <img
-                      src="./images/details4.png"
-                      alt="Range & Integrated lights Photo2"
-                      class="detail__photo"
-                    />
-                  </a>
-                </div>
-                <div class="detail__title">Range & Integrated lights</div>
-                <div class="detail__text">
+                </p>
+              </div>
+            </section>
+            <section class="details__info">
+              <div class="details__photos">
+                <img
+                  class="details__photos--wide details__photo"
+                  src="./images/details/brake-light.png"
+                  alt="Brake light"
+                />
+                <img
+                  class="details__photos--square details__photo"
+                  src="./images/details/front-light.png"
+                  alt="Front light"
+                />
+              </div>
+              <div class="details__text">
+                <h3 class="details__title">Range & Integrated lights</h3>
+                <p class="details__content">
                   The removable battery has up to 70km battery autonomy and
                   weighs only 2.4 kg. Lights integrated into the frame give you
                   always-on visibility day and night.
-                </div>
-              </article>
-              <article class="detail">
-                <div class="detail__photos">
-                  <a
-                    href="#"
-                    class="detail__link detail__link--square"
-                  >
-                    <img
-                      src="./images/details5.png"
-                      alt="Hydraulic disc brakes Photo1"
-                      class="detail__photo"
-                    />
-                  </a>
-
-                  <a
-                    href="#"
-                    class="detail__link detail__link--wide"
-                  >
-                    <img
-                      src="./images/details6.png"
-                      alt="Hydraulic disc brakes Photo2"
-                      class="detail__photo"
-                    />
-                  </a>
-                </div>
-                <div class="detail__title">
+                </p>
+              </div>
+            </section>
+            <section class="details__info">
+              <div class="details__photos">
+                <img
+                  class="details__photos--square details__photo"
+                  src="./images/details/hand-brake.png"
+                  alt="Hand Brake"
+                />
+                <img
+                  class="details__photos--wide details__photo"
+                  src="./images/details/bicycle-kickstand.png"
+                  alt="kickstand"
+                />
+              </div>
+              <div class="details__text">
+                <h3 class="details__title">
                   Hydraulic disc brakes & Lightweight
-                </div>
-                <div class="detail__text">
+                </h3>
+                <p class="details__content">
                   Brakes with total stopping power the second you make contact.
                   The removable battery has up to 70km battery autonomy and
                   weighs only 2.4 kg. Lights integrated into the frame give you
                   always-on visibility day and night.
-                </div>
-              </article>
-              <div class="details__button">
+                </p>
+              </div>
+            </section>
+            <button class="details__button button">Explore</button>
+          </div>
+        </section>
+        <section
+          class="contacts"
+          id="contacts"
+        >
+          <h2 class="section-title">Contact us</h2>
+          <div class="contacts__container">
+            <form
+              onsubmit="this.reset(); return false"
+              class="contacts__form"
+              action="#"
+            >
+              <input
+                placeholder="Name"
+                type="name"
+                class="contacts__input contacts__input--name"
+                required
+              />
+              <input
+                placeholder="Email"
+                type="email"
+                class="contacts__input contacts__input--email"
+                required
+              />
+              <textarea
+                class="contacts__message"
+                placeholder="Message"
+                name="message"
+                required
+              ></textarea>
+              <button class="contacts__button button">Send</button>
+            </form>
+            <div class="contacts__block">
+              <div class="contacts__phone">
+                <p class="contacts__title">Phone</p>
                 <a
-                  href="#"
-                  class="button details__button__link"
+                  class="contacts__link"
+                  href="tel:+1 234 5555-55-55"
                 >
-                  Explore
+                  +1 234 5555-55-55
+                </a>
+              </div>
+              <div class="contacts__email">
+                <p class="contacts__title">Email</p>
+                <a
+                  class="contacts__link"
+                  href="mailto:hello@miami.com"
+                >
+                  hello@miami.com
+                </a>
+              </div>
+              <div class="contacts__address">
+                <p class="contacts__title">Address</p>
+                <a
+                  class="contacts__link"
+                  target="_blank"
+                  href="https://share.google/UgOZbe5e4V5X6ALxp"
+                >
+                  400 first ave.
+                  <br />
+                  suite 700
+                  <br />
+                  Minneapolis, MN 55401
                 </a>
               </div>
             </div>
-          </section>
-          <section
-            id="contacts"
-            class="contacts"
-          >
-            <h2 class="section-title">Contact us</h2>
-            <div class="contacts__wrapper">
-              <div class="contacts__form">
-                <form
-                  action="#"
-                  method="post"
-                  onsubmit="this.reset(); return false;"
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    class="contacts__input"
-                    required
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    class="contacts__input"
-                    required
-                  />
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    rows="5"
-                    cols="25"
-                    class="contacts__input contacts__input--textarea"
-                    required
-                  ></textarea>
-                  <button
-                    type="submit"
-                    class="button contacts__button"
-                  >
-                    Send
-                  </button>
-                </form>
-              </div>
-              <div class="contacts__info">
-                <div class="contacts__item">
-                  <p class="contacts__title">Phone</p>
-                  <a
-                    href="tel:+1 234 5555-55-55"
-                    class="contacts__link"
-                  >
-                    +1 234 5555-55-55
-                  </a>
-                </div>
-                <div class="contacts__item">
-                  <p class="contacts__title">Email</p>
-                  <a
-                    href="mailto:hello@miami.com"
-                    class="contacts__link"
-                  >
-                    hello@miami.com
-                  </a>
-                </div>
-                <div class="contacts__item">
-                  <p class="contacts__title">Address</p>
-                  <a
-                    href="https://maps.app.goo.gl/QB3PHL9Xqrtn9Lb98"
-                    target="_blank"
-                    class="contacts__link"
-                  >
-                    400 first ave.
-                    <br />
-                    suite 700
-                    <br />
-                    Minneapolis, MN 55401
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </main>
-
     <footer class="footer"></footer>
   </body>
 </html>
