@@ -8,15 +8,16 @@
 
   background-image: url(../images/background--img.jpg);
   background-repeat: no-repeat;
-  background-position: right center;
   background-size: cover;
 
+  background-position: 72% center;
+
   @include on-tablet {
-    background-position: center;
+    background-position: 60% center;
   }
 
   @include on-desktop {
-    background-position: right;
+    background-position: right center;
   }
 
   &__bottom {
@@ -34,7 +35,6 @@
 
     font-size: 33px;
     font-weight: 700;
-    font-style: normal;
     line-height: 100%;
     text-align: center;
 
