@@ -2,32 +2,44 @@
   margin: 0;
   margin-bottom: 48px;
 
-  font-size: $section-text-size;
   font-weight: 500;
+  font-size: 32px;
   line-height: 100%;
+
   text-align: center;
   letter-spacing: -1.5px;
+  text-transform: capitalize;
 
-  @include on-tablet {
+  @include onTablet {
     font-size: 48px;
   }
 
-  @include on-desktop {
+  @include onDesktop {
     font-size: 64px;
   }
 
-  &__move {
-    margin-bottom: 32px;
+  &--align-left {
     text-align: left;
+    margin-bottom: 32px;
   }
 
-  &__content {
-    margin: 0;
-    font-size: 23px;
-    font-weight: 500;
-
-    @include on-desktop {
-      max-width: 498px;
+  &--compare-bikes {
+    @include onDesktop {
+      margin-bottom: 56px;
     }
+  }
+
+  &--details {
+    @include onTablet {
+      margin-bottom: 64px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 48px;
+    }
+  }
+
+  &--contact-us {
+    text-transform: none;
   }
 }

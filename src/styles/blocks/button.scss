@@ -1,22 +1,29 @@
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
   width: 100%;
   height: 56px;
-  border: none;
   border-radius: 40px;
+  background-color: $main-text-color;
 
-  font-size: 16px;
+  text-decoration: none;
+  color: $inverted-text-color;
+  font-family: inherit;
   font-weight: 700;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 169%;
 
-  background-color: #fff;
-
-  @include hover(box-shadow, #e8e8f066);
+  cursor: pointer;
+  transition: all $effectDuration;
 
   &:hover {
-    cursor: pointer;
-    box-shadow: 1px 4px 16px #e8e8f066;
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
   }
+
   &:active {
-    box-shadow: 1px 4px 16px #e8e8f0a3;
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
   }
 }

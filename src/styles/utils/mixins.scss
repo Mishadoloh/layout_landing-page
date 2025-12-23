@@ -1,48 +1,34 @@
-@mixin on-tablet {
+@mixin onTablet {
   @media (min-width: $tablet-min-width) {
     @content;
   }
 }
 
-@mixin on-desktop {
+@mixin onDesktop {
   @media (min-width: $desktop-min-width) {
     @content;
   }
 }
 
-@mixin constent-padding-inline() {
-  padding-inline: 20px;
-
-  @include on-tablet {
-    padding-inline: 72px;
-  }
-
-  @include on-desktop {
-    padding-inline: 120px;
-  }
-}
-
-@mixin hover($property, $toValue) {
-  transition: #{$property} 0.4s;
+@mixin hover ($property, $toValue) {
+  transition: #{$property} #{$effectDuration};
   &:hover {
     #{$property}: $toValue;
   }
 }
 
-@mixin page-grid {
+@mixin pageGrid {
   --columns: 2;
-
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
   column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
 
-  @include on-tablet {
+  @include onTablet {
     --columns: 6;
-
     column-gap: 24px;
   }
 
-  @include on-desktop {
+  @include onDesktop {
     --columns: 12;
   }
 }

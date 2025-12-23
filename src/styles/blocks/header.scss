@@ -1,46 +1,49 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-  height: 100vh;
-
-  background-image: url(../images/background--img.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../images/backgrounds/header-bg-mobile.jpg);
   background-size: cover;
+  background-position: right;
 
-  background-position: 72% center;
-
-  @include on-tablet {
-    background-position: 60% center;
+  @include onTablet {
+    background-image: url(../images/backgrounds/header-bg-tablet.jpg);
+    background-position: center;
   }
 
-  @include on-desktop {
-    background-position: right center;
-  }
+  &__content {
 
-  &__bottom {
-    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    @include on-tablet {
-      padding-bottom: 88px;
-    }
-
-    @include constent-padding-inline;
+    height: 100vh;
   }
 
   &__title {
-    padding-top: 300px;
-
-    font-size: 33px;
+    margin: 0;
+    font-style: normal;
     font-weight: 700;
+    font-size: 36px;
     line-height: 100%;
+    letter-spacing: -1.5px;
     text-align: center;
 
-    @include on-tablet {
-      padding-top: 190px;
-      font-size: 52px;
+    @include onTablet {
+      font-size: 64px;
+    }
+
+    @include onDesktop {
+      font-size: 80px;
+    }
+  }
+
+  &__bottom {
+    padding-bottom: 88px;
+
+    @include onTablet {
+      padding-bottom: 130px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 203px;
     }
   }
 }

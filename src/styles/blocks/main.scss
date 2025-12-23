@@ -1,13 +1,56 @@
 .main {
-  display: grid;
-  grid-column: 1 / -1;
-  padding-block: 60px;
-  background-color: $main-background-color;
+  background: #1d1d1d;
 
-  @include constent-padding-inline;
+  &__content {
+    padding-top: 60px;
+    padding-bottom: 120px;
 
-  @include on-tablet {
-    row-gap: 120px;
-    padding-block: 120px;
+    @include onTablet {
+      padding-top: 120px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 182px;
+    }
+  }
+
+  &__section {
+    margin-bottom: 92px;
+
+    @include onTablet {
+      margin-bottom: 120px;
+    }
+
+    &--move-free {
+      @include onTablet {
+        margin-bottom: 132px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 164px;
+      }
+    }
+
+    &--compare-bikes {
+      @include onDesktop {
+        margin-bottom: 144px;
+      }
+    }
+
+    &--details {
+      margin-bottom: 80px;
+
+      @include onTablet {
+        margin-bottom: 120px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 180px;
+      }
+    }
+
+    &--contact-us {
+      margin-bottom: 0;
+    }
   }
 }
