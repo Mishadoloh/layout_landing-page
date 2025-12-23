@@ -1,22 +1,29 @@
-# Landing Page
+Landing Page
 
-A responsive landing page created as part of my portfolio.
+This is a responsive landing page created as part of my personal portfolio.  
+The project demonstrates my skills in layout building, responsive design, and clean frontend code.
 
-##  Demo
+
+
+ Demo
+
+Live demo of the project:  
 https://mishadoloh.github.io/layout_landing-page/
 
-##  Technologies
-- HTML5
-- SCSS
-- JavaScript
 
-##  How to run locally
-1. Clone the repository
-2. Open `index.html` in your browser
 
-##  Description
-The main goal of the project was to practice building a clean layout based on a design, using semantic HTML, SCSS, and responsive techniques. 
-The page is fully responsive and optimized for desktop, tablet, and mobile devices. 
-During development, I focused on clean code structure, reusable SCSS components, and proper file organization. 
-This project demonstrates my ability to create responsive layouts and prepare a project for production and portfolio use.
+ Technologies Used
 
+- HTML5  
+- SCSS (Sass)  
+- JavaScript  
+
+
+
+ How to Run the Project Locally
+
+To run this project on your local machine, follow these steps:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Mishadoloh/layout_landing-page.git
